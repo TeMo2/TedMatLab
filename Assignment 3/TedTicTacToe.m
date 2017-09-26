@@ -23,6 +23,7 @@ GameBoard = [3:5;6:8;9:11];
 
 fprintf('The CPU will move first')
 
+%find available spots and eliminate previous moves from CPU options
 CompMove = find(GameBoard >=3);
 CompTurn = CompMove(randperm(length(CompMove),1))
 
@@ -87,6 +88,7 @@ GameBoard
 
 fprintf('computer move')
 
+%find available spots and eliminate previous moves from CPU options
 CompMove = find(GameBoard >=3);
 CompTurn = CompMove(randperm(length(CompMove),1))
 
@@ -149,6 +151,7 @@ GameBoard
 
 fprintf('computer move')
 
+%find available spots and eliminate previous moves from CPU options
 CompMove = find(GameBoard >=3);
 CompTurn = CompMove(randperm(length(CompMove),1))
 
@@ -276,6 +279,7 @@ GameBoard
  
  fprintf('computer move')
 
+ %find available spots and eliminate previous moves from CPU options
 CompMove = find(GameBoard >=3);
 CompTurn = CompMove(randperm(length(CompMove),1))
 
@@ -368,6 +372,7 @@ GameBoard
 %Check for a user win 
 %if you choose to press 1 it will close matlab so if you do not want matlab
 %to close it do not press 1
+
   if  GameBoard(1,1) + GameBoard(1,2) + GameBoard(1,3) == 0
      win = input('You won! Press 1 to returnthe game: ')
                return
@@ -400,6 +405,7 @@ GameBoard
  
   fprintf('computer move')
 
+%find available spots and eliminate previous moves from CPU options
 CompMove = find(GameBoard >=3);
 CompTurn = CompMove(randperm(length(CompMove),1))
 
