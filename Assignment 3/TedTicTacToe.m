@@ -24,7 +24,7 @@ GameBoard = [3:5;6:8;9:11]
 fprintf('The CPU will move first')
 
 CompMove = find(GameBoard >=3);
-CompTurn = CompMove(randperm(length(CompMove),1));
+CompTurn = CompMove(randperm(length(CompMove),1))
 
 switch(CompTurn)
      case 1
@@ -88,26 +88,26 @@ GameBoard
 fprintf('computer move')
 
 CompMove = find(GameBoard >=3);
-CompTurn = CompMove(randperm(length(CompMove),1));
+CompTurn = CompMove(randperm(length(CompMove),1))
 
 switch(CompTurn)
-     case 3
+     case 1
       GameBoard(1,1)= -1;
-    case 4 
+    case 2
         GameBoard(1,2)= -1;
-    case 5 
+    case 3 
         GameBoard(1,3)= -1;
-    case 6 
+    case 4 
         GameBoard(2,1)= -1;
-    case 7
+    case 5
         GameBoard(2,2)= -1;
-    case 8
+    case 6
         GameBoard(2,3)= -1;
-    case 9
+    case 7
         GameBoard(3,1)= -1;
-    case 10 
+    case 8 
         GameBoard(3,2)= -1;
-    case 11
+    case 9
         GameBoard(3,3)= -1;
 end 
         
@@ -150,26 +150,26 @@ GameBoard
 fprintf('computer move')
 
 CompMove = find(GameBoard >=3);
-CompTurn = CompMove(randperm(length(CompMove),1));
+CompTurn = CompMove(randperm(length(CompMove),1))
 
 switch(CompTurn)
-     case 3
+     case 1
       GameBoard(1,1)= -1;
-    case 4 
+    case 2 
         GameBoard(1,2)= -1;
-    case 5 
+    case 3 
         GameBoard(1,3)= -1;
-    case 6 
+    case 4
         GameBoard(2,1)= -1;
-    case 7
+    case 5
         GameBoard(2,2)= -1;
-    case 8
+    case 6
         GameBoard(2,3)= -1;
-    case 9
+    case 7
         GameBoard(3,1)= -1;
-    case 10 
+    case 8
         GameBoard(3,2)= -1;
-    case 11
+    case 9
         GameBoard(3,3)= -1;
 end 
 
@@ -183,10 +183,13 @@ GameBoard
     if  GameBoard(1,1) + GameBoard(1,2) + GameBoard(1,3) == -3
          win = input('You lost! Press 1 to quit the game\n: ')
                return
-    elseif GameBoard(2,1) + GameBoard(2,1) + GameBoard(2,3) == -3 
+    elseif GameBoard(2,1) + GameBoard(2,2) + GameBoard(2,3) == -3 
         win = input('You lost! Press 1 to quit the game\n: ')
                return
-    elseif GameBoard(1,2) + GameBoard(2,1) + GameBoard(3,1) == -3 
+    elseif GameBoard(3,1) + GameBoard(3,2) + GameBoard(3,3) == -3 
+        win = input('You lost! Press 1 to quit the game\n: ')
+               return
+    elseif GameBoard(1,1) + GameBoard(2,1) + GameBoard(3,1) == -3 
         win = input('You lost! Press 1 to quit the game\n: ')
                return
     elseif GameBoard(1,2) + GameBoard(2,2) + GameBoard(3,2) == -3 
@@ -244,10 +247,13 @@ GameBoard
  if  GameBoard(1,1) + GameBoard(1,2) + GameBoard(1,3) == 0
      win = input('You won! Press 1 to returnthe game: ')
                return
-    elseif GameBoard(2,1) + GameBoard(2,1) + GameBoard(2,3) == 0
+    elseif GameBoard(2,1) + GameBoard(2,2) + GameBoard(2,3) == 0
         win = input('You won! Press 1 to quit the game: ')
                return
-    elseif GameBoard(1,2) + GameBoard(2,1) + GameBoard(3,1) == 0 
+    elseif GameBoard(3,1) + GameBoard(3,2) + GameBoard(3,3) == 0 
+        win = input('You won! Press 1 to quit the game: ')
+               return
+    elseif GameBoard(1,1) + GameBoard(2,1) + GameBoard(3,1) == 0 
         win = input('You won! Press 1 to quit the game: ')
                return
     elseif GameBoard(1,2) + GameBoard(2,2) + GameBoard(3,2) == 0 
@@ -261,7 +267,7 @@ GameBoard
                return
     elseif GameBoard(1,3) + GameBoard(2,2) + GameBoard(3,1) == 0 
         win = input('You won! Press 1 to quit the game: ')
-               return
+               return           
     else 
  end
     
@@ -271,26 +277,26 @@ GameBoard
  fprintf('computer move')
 
 CompMove = find(GameBoard >=3);
-CompTurn = CompMove(randperm(length(CompMove),1));
+CompTurn = CompMove(randperm(length(CompMove),1))
 
 switch(CompTurn)
-     case 3
+     case 1
       GameBoard(1,1)= -1;
-    case 4 
+    case 2 
         GameBoard(1,2)= -1;
-    case 5 
+    case 3 
         GameBoard(1,3)= -1;
-    case 6 
+    case 4 
         GameBoard(2,1)= -1;
-    case 7
+    case 5
         GameBoard(2,2)= -1;
-    case 8
+    case 6
         GameBoard(2,3)= -1;
-    case 9
+    case 7
         GameBoard(3,1)= -1;
-    case 10 
+    case 8 
         GameBoard(3,2)= -1;
-    case 11
+    case 9
         GameBoard(3,3)= -1;
 end 
 
@@ -300,13 +306,16 @@ GameBoard
 %if you choose to press 1 it will close matlab so if you do not want matlab
 %to close it do not press 1
 
-  if  GameBoard(1,1) + GameBoard(1,2) + GameBoard(1,3) == -3
-      win = input('You lost! Press 1 to quit the game\n: ')
+   if  GameBoard(1,1) + GameBoard(1,2) + GameBoard(1,3) == -3
+         win = input('You lost! Press 1 to quit the game\n: ')
                return
-    elseif GameBoard(2,1) + GameBoard(2,1) + GameBoard(2,3) == -3 
+    elseif GameBoard(2,1) + GameBoard(2,2) + GameBoard(2,3) == -3 
         win = input('You lost! Press 1 to quit the game\n: ')
                return
-    elseif GameBoard(1,2) + GameBoard(2,1) + GameBoard(3,1) == -3 
+    elseif GameBoard(3,1) + GameBoard(3,2) + GameBoard(3,3) == -3 
+        win = input('You lost! Press 1 to quit the game\n: ')
+               return
+    elseif GameBoard(1,1) + GameBoard(2,1) + GameBoard(3,1) == -3 
         win = input('You lost! Press 1 to quit the game\n: ')
                return
     elseif GameBoard(1,2) + GameBoard(2,2) + GameBoard(3,2) == -3 
@@ -319,10 +328,11 @@ GameBoard
         win = input('You lost! Press 1 to quit the game\n: ')
                return
     elseif GameBoard(1,3) + GameBoard(2,2) + GameBoard(3,1) == -3 
-       win = input('You lost! Press 1 to quit the game\n: ')
+        win = input('You lost! Press 1 to quit the game\n: ')
                return
-    else 
-  end
+    else
+    end
+    
     
   
   %User's Fourth Move
@@ -358,27 +368,30 @@ GameBoard
 %Check for a user win 
 %if you choose to press 1 it will close matlab so if you do not want matlab
 %to close it do not press 1
- if  GameBoard(1,1) + GameBoard(1,2) + GameBoard(1,3) == 0
-       win = input('You won! Press 1 to quit the game: ')
+  if  GameBoard(1,1) + GameBoard(1,2) + GameBoard(1,3) == 0
+     win = input('You won! Press 1 to returnthe game: ')
                return
-    elseif GameBoard(2,1) + GameBoard(2,1) + GameBoard(2,3) == 0
-          win = input('You won! Press 1 to quit the game: ')
+    elseif GameBoard(2,1) + GameBoard(2,2) + GameBoard(2,3) == 0
+        win = input('You won! Press 1 to quit the game: ')
                return
-    elseif GameBoard(1,2) + GameBoard(2,1) + GameBoard(3,1) == 0 
-          win = input('You won! Press 1 to quit the game: ')
+    elseif GameBoard(3,1) + GameBoard(3,2) + GameBoard(3,3) == 0 
+        win = input('You won! Press 1 to quit the game: ')
+               return
+    elseif GameBoard(1,1) + GameBoard(2,1) + GameBoard(3,1) == 0 
+        win = input('You won! Press 1 to quit the game: ')
                return
     elseif GameBoard(1,2) + GameBoard(2,2) + GameBoard(3,2) == 0 
-          win = input('You won! Press 1 to quit the game: ')
+        win = input('You won! Press 1 to quit the game: ')
                return
     elseif GameBoard(1,3) + GameBoard(2,3) + GameBoard(3,3) == 0 
-          win = input('You won! Press 1 to quit the game: ')
+        win = input('You won! Press 1 to quit the game: ')
                return
     elseif GameBoard(1,1) + GameBoard(2,2) + GameBoard(3,3) == 0 
-          win = input('You won! Press 1 to quit the game: ')
+        win = input('You won! Press 1 to quit the game: ')
                return
     elseif GameBoard(1,3) + GameBoard(2,2) + GameBoard(3,1) == 0 
         win = input('You won! Press 1 to quit the game: ')
-               return
+               return           
     else 
  end
  
@@ -388,26 +401,26 @@ GameBoard
   fprintf('computer move')
 
 CompMove = find(GameBoard >=3);
-CompTurn = CompMove(randperm(length(CompMove),1));
+CompTurn = CompMove(randperm(length(CompMove),1))
 
 switch(CompTurn)
-     case 3
+     case 1
       GameBoard(1,1)= -1;
-    case 4 
+    case 2
         GameBoard(1,2)= -1;
-    case 5 
+    case 3 
         GameBoard(1,3)= -1;
-    case 6 
+    case 4 
         GameBoard(2,1)= -1;
-    case 7
+    case 5
         GameBoard(2,2)= -1;
-    case 8
+    case 6
         GameBoard(2,3)= -1;
-    case 9
+    case 7
         GameBoard(3,1)= -1;
-    case 10 
+    case 8 
         GameBoard(3,2)= -1;
-    case 11
+    case 9
         GameBoard(3,3)= -1;
 end 
 
@@ -418,28 +431,30 @@ GameBoard
 %to close it do not press 1rt
 
    if  GameBoard(1,1) + GameBoard(1,2) + GameBoard(1,3) == -3
-        win = input('You lost! Press 1 to quit the game: ')
+         win = input('You lost! Press 1 to quit the game\n: ')
                return
-    elseif GameBoard(2,1) + GameBoard(2,1) + GameBoard(2,3) == -3 
-         win = input('You lost! Press 1 to quit the game: ')
+    elseif GameBoard(2,1) + GameBoard(2,2) + GameBoard(2,3) == -3 
+        win = input('You lost! Press 1 to quit the game\n: ')
                return
-    elseif GameBoard(1,2) + GameBoard(2,1) + GameBoard(3,1) == -3 
-         win = input('You lost! Press 1 to quit the game: ')
+    elseif GameBoard(3,1) + GameBoard(3,2) + GameBoard(3,3) == -3 
+        win = input('You lost! Press 1 to quit the game\n: ')
+               return
+    elseif GameBoard(1,1) + GameBoard(2,1) + GameBoard(3,1) == -3 
+        win = input('You lost! Press 1 to quit the game\n: ')
                return
     elseif GameBoard(1,2) + GameBoard(2,2) + GameBoard(3,2) == -3 
-         win = input('You lost! Press 1 to quit the game\n: ')
+        win = input('You lost! Press 1 to quit the game\n: ')
                return
     elseif GameBoard(1,3) + GameBoard(2,3) + GameBoard(3,3) == -3 
-         win = input('You lost! Press 1 to quit the game\n: ')
+        win = input('You lost! Press 1 to quit the game\n: ')
                return
     elseif GameBoard(1,1) + GameBoard(2,2) + GameBoard(3,3) == -3 
-         win = input('You lost! Press 1 to quit the game\n: ')
+        win = input('You lost! Press 1 to quit the game\n: ')
                return
     elseif GameBoard(1,3) + GameBoard(2,2) + GameBoard(3,1) == -3 
-          win = input('You lost! Press 1 to quit the game\n: ')
+        win = input('You lost! Press 1 to quit the game\n: ')
                return
-    else tie = input('Tie game! Press 1 to quit: ')
-           return
-            
-   end
+   else tie = input('The game ends in a tie! Press 1 to quit: ')
+    end
+    
   
