@@ -17,7 +17,7 @@ players = input('Choose the number of human players: ');
 fprintf('CPU will be -1 and you will be assigned "0" on the playing board\n')
 
 %Show gameboard
-GameBoard = [3:5;6:8;9:11]
+GameBoard = [3:5;6:8;9:11];
 
 %The following code is written to give the computer to make the first move
 
@@ -27,8 +27,8 @@ CompMove = find(GameBoard >=3);
 CompTurn = CompMove(randperm(length(CompMove),1))
 
 switch(CompTurn)
-     case 1
-      GameBoard(1,1)= -1;
+    case 1
+        GameBoard(1,1)= -1;
     case 2 
         GameBoard(1,2)= -1;
     case 3 
@@ -91,8 +91,8 @@ CompMove = find(GameBoard >=3);
 CompTurn = CompMove(randperm(length(CompMove),1))
 
 switch(CompTurn)
-     case 1
-      GameBoard(1,1)= -1;
+    case 1
+        GameBoard(1,1)= -1;
     case 2
         GameBoard(1,2)= -1;
     case 3 
@@ -156,22 +156,22 @@ switch(CompTurn)
      case 1
       GameBoard(1,1)= -1;
     case 2 
-        GameBoard(1,2)= -1;
-    case 3 
-        GameBoard(1,3)= -1;
-    case 4
         GameBoard(2,1)= -1;
+    case 3 
+        GameBoard(3,1)= -1;
+    case 4 
+        GameBoard(1,2)= -1;
     case 5
         GameBoard(2,2)= -1;
     case 6
-        GameBoard(2,3)= -1;
-    case 7
-        GameBoard(3,1)= -1;
-    case 8
         GameBoard(3,2)= -1;
+    case 7
+        GameBoard(1,3)= -1;
+    case 8 
+        GameBoard(2,3)= -1;
     case 9
         GameBoard(3,3)= -1;
-end 
+end  
 
 GameBoard
 
@@ -283,19 +283,19 @@ switch(CompTurn)
      case 1
       GameBoard(1,1)= -1;
     case 2 
-        GameBoard(1,2)= -1;
-    case 3 
-        GameBoard(1,3)= -1;
-    case 4 
         GameBoard(2,1)= -1;
+    case 3 
+        GameBoard(3,1)= -1;
+    case 4 
+        GameBoard(1,2)= -1;
     case 5
         GameBoard(2,2)= -1;
     case 6
-        GameBoard(2,3)= -1;
-    case 7
-        GameBoard(3,1)= -1;
-    case 8 
         GameBoard(3,2)= -1;
+    case 7
+        GameBoard(1,3)= -1;
+    case 8 
+        GameBoard(2,3)= -1;
     case 9
         GameBoard(3,3)= -1;
 end 
@@ -406,24 +406,23 @@ CompTurn = CompMove(randperm(length(CompMove),1))
 switch(CompTurn)
      case 1
       GameBoard(1,1)= -1;
-    case 2
-        GameBoard(1,2)= -1;
-    case 3 
-        GameBoard(1,3)= -1;
-    case 4 
+    case 2 
         GameBoard(2,1)= -1;
+    case 3 
+        GameBoard(3,1)= -1;
+    case 4 
+        GameBoard(1,2)= -1;
     case 5
         GameBoard(2,2)= -1;
     case 6
-        GameBoard(2,3)= -1;
-    case 7
-        GameBoard(3,1)= -1;
-    case 8 
         GameBoard(3,2)= -1;
+    case 7
+        GameBoard(1,3)= -1;
+    case 8 
+        GameBoard(2,3)= -1;
     case 9
         GameBoard(3,3)= -1;
 end 
-
 GameBoard
 
 %Check for a CPU win. If not the game ends in a tie 
